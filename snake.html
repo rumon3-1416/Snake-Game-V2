@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="./styles/snake.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="control-panel">
+      <div class="result">
+        <h1 class="score">Score : 0</h1>
+      </div>
+      <form>
+        <label for="speed">Speed </label>
+        <select name="speed" id="speed">
+          <option value="low">Low</option>
+          <option value="normal" selected>Normal</option>
+          <option value="high">High</option>
+        </select>
+      </form>
+    </div>
+
+    <div class="canvas-div">
+      <canvas id="canvas" width="800" height="500">
+      </canvas>
+
+      <div class="crashed hidden">
+        <h1 class="crash-anim">Crashed!</h1>
+      </div>
+    </div>
+  </div>
+
+  <script src="./scripts/snake_game.js"></script>
+</body>
+
+</html>

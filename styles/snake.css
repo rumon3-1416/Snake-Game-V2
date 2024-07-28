@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(158, 158, 158);
+}
+
+.hidden {
+  display: none;
+}
+
+.container {
+  width: 1174px;
+  padding: 2rem;
+  display: flex;
+}
+
+.control-panel {
+  color: white;
+  width: 300px;
+  font-family: sans-serif;
+}
+
+.score {
+  margin: 1rem 0;
+}
+
+form label {
+  font-size: 1.5rem;
+}
+form select {
+  font-size: 1.3rem;
+  outline: none;
+}
+
+.canvas-div {
+  width: 810px;
+  position: relative;
+}
+#canvas {
+  background-color: rgb(168, 148, 124);
+  border: 0.3rem solid #04aa6d;
+  border-radius: 8px;
+}
+.crashed {
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.3),
+    rgba(0, 0, 0, 0.5)
+  );
+  width: 800px;
+  height: 500px;
+  border-radius: 3px;
+  position: absolute;
+  top: 0.3rem;
+  right: 0.3rem;
+  bottom: 0.3rem;
+  left: 0.3rem;
+}
+
+@keyframes crash-ani {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.crash-anim {
+  color: red;
+  text-align: center;
+  font-size: 80px;
+  line-height: 80px;
+  font-weight: 900;
+  font-family: sans-serif;
+  font-style: italic;
+  position: relative;
+  top: 210px;
+  opacity: 0.7;
+
+  animation-name: crash-ani;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
